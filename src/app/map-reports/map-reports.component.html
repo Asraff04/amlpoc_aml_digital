@@ -1,0 +1,71 @@
+<div *ngIf="isAddreport" class="add-role">
+  <div class="add-role-field">
+  <mat-form-field>
+  <mat-label>Role Short Name</mat-label>
+  <mat-select [(ngModel)]="report" [ngModelOptions]="{standalone: true}">
+  <mat-option *ngFor="let report of allRolesReport" [value]="report" >
+  {{report.roleShortName}}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div>
+  <div class="add-role-field">
+  <mat-form-field>
+  <mat-label>Select Report</mat-label>
+  <mat-select [(ngModel)]="listAllNewModule" [ngModelOptions]="{standalone: true}">
+  <mat-option *ngFor="let reports of mappedreportList" [value]="reports.moduleName" >
+  {{reports.moduleName}}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div>
+  
+  <button class="btn btn-lg btn-primary btn-block submit_btn" type="submit" (click)="mapReport()" >Submit</button>
+  </div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th class="addbtn" colspan="6"><img src="../../assets/Add.png" (click)="isAddreport=!isAddreport"></th>
+      </tr>
+    <tr class="theading">
+    <th scope="col">Sr Id</th>
+    <th scope="col">Role Short Name</th>
+    <th scope="col">Mapped Report</th>
+    <th scope="col">Add Date</th>
+    <th scope="col">Update Date</th>
+    
+    <th scope="col"></th>
+    
+    </tr>
+    </thead>
+    <tbody>
+    <tr
+    *ngFor="let role of roledetails; let i= index; let odd= odd"
+    [class.odd]="odd"
+    >
+        <th scope="row">{{i+1}}</th>
+          <td>
+            <input [ngClass]="{'userItem':!role.isEditable}" type="text" [(ngModel)]="role.roleShortName" disabled>
+          </td>
+          <td>
+            <input [ngClass]="{'userItem':!role.isEditable}" type="text"[(ngModel)]="role.moduleName"  [hidden]="role.isEditable" [disabled]="!role.isEditable">
+            <mat-form-field [hidden]="!role.isEditable">
+              <mat-select [(value)]="selectedreport">
+                <mat-option *ngFor="let report of mappedreportList" [value]="report">
+                  {{ report.moduleName}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+    
+          </td>
+          <td ><input [ngClass]="{'userItem':!role.isEditable}" type="text" [(ngModel)]="role.addDate" disabled></td>
+          <td ><input [ngClass]="{'userItem':!role.isEditable}" type="text" [(ngModel)]="role.updateDate"  disabled></td>
+            <td>
+              <button *ngIf="role.isEditable" id="saveBtn"  class="btn btn-default" type="submit" (click)="updateMappedReport(selectedreport.moduleName, role.roleId, role.moduleName)">Save</button>
+            <img class="table-row-action edit-action send-img" *ngIf="!role.isEditable" (click)="role.isEditable=!role.isEditable" src="../../assets/Send.png"> 
+            <img *ngIf="!role.isEditable" (click) ="deleteExistMapReport(role.roleId, role.moduleName)" src="../../assets/Recycle.png">  
+          </td>
+      </tr>
+    </tbody>
+    </table>

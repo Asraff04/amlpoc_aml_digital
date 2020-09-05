@@ -1,0 +1,6 @@
+.adminpage-Container{
+    display: flex;
+}
+.pgheaderCont{
+    flex: 1;
+}

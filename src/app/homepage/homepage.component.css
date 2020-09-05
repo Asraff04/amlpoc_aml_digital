@@ -1,0 +1,112 @@
+.body{
+  background-color: #f0f0f0 ;
+  }
+  .nav-menu{
+  background-color: #ffffff ;
+  margin: 10px;
+  padding: 10px;
+  }
+  .pageHeader{
+  background-color: #e60000 ;
+  color: #fff ;
+  font-weight: bold;
+  }
+  .active{
+  background-color: blue;
+  }
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+  overflow: hidden;
+  background-color: #ddd ;
+  }
+  
+  .navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+  
+  .dropdown {
+  float: left;
+  overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+  font-size: 16px;
+  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+  }
+  
+  .dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9 ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  }
+  
+  .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+  background-color: #ddd ;
+  }
+  
+  .dropdown:hover .dropdown-content {
+  display: block;
+  }
+  .hamburger-img{
+  width:40px;
+  height:40px;
+  }
+  .homePageCards{
+  width: 350px;
+  height: 160px;
+  background-color: #2781e7 ;
+  border-radius: 20px;
+  margin: 40px;
+  text-align: center;
+  padding: 21px 0 50px 0;
+  color: #fff ;
+  }
+  .cardsRow{
+  display:flex;
+  }
+  .cardContainer{
+  margin:40px 0 40px 0;
+  }
+  .card-txt{
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 12px;
+  }
+  .card-subtxt{
+  font-size: 16px;
+  }
+  .can-access{
+  border: none;
+  outline: none;
+  }

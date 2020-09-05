@@ -1,0 +1,116 @@
+<div class="adminpage-Container">
+    <div class="sidebarCont">
+    <sidebar></sidebar>
+    </div>
+    <div class="pgheaderCont">
+    <div>
+    <page-header></page-header>
+    </div>
+
+    <mat-card class="settings-card">
+    <div class="section1">
+    <img class="profile-img" src="../../assets/profile-icon.png">
+    <p class="sec1Heading">Personal Details:</p>
+    <table>
+    <tr>
+    <td class="details_lable">First Name:</td>
+    <td class="details_content">{{userDetails.firstName}}</td>
+    </tr>
+    <tr>
+    <td class="details_lable">Last Name:</td>
+    <td class="details_content">{{userDetails.lastName}}</td>
+    </tr>
+    <tr>
+    <td class="details_lable">Login Id:</td>
+    <td class="details_content">{{userDetails.loginId}}</td>
+    </tr>
+    <tr>
+    <td class="details_lable">Email Id:</td>
+    <td class="details_content">{{userDetails.mailId}}</td>
+    </tr>
+    </table>
+    </div>
+    <!-- <div class="section2">
+    
+        <img class="profile-img" src="../../assets/settings-circle-blue-512.png">
+        <p class="sec2Heading">Password Settings:</p>
+        <p>Security Questions?</p>
+            <div class="secQue">
+              <span>1.What is your favorite Pet Name?</span>
+            </div>
+            <input type="password" [(ngModel)]="secAns1" disabled>
+            <div class="secQue">
+              <span>1.What is your favorite city?</span>
+            </div>
+            <input type="password" [(ngModel)]="secAns2" disabled>
+       <div class="chngPwd">
+        <div class="secQue">
+          <span>Password:</span><span><input type="password" [(ngModel)]="pwd" ></span><span><img src="../../assets/Send.png" (click)="isPwdShow=!isPwdShow" ></span>
+        </div>
+        <div class="pwdfield" *ngIf="isPwdShow">
+          <mat-card class="pwdcard"> 
+            <div class="pwdCont">
+              <label>Current Password:</label>
+              <input type="password" required>
+            </div>
+            <div class="pwdCont">
+              <label>New Password:</label>
+              <input type="password" required>
+            </div>
+            <div class="pwdCont">
+              <label>Confirm Password:</label>
+              <input type="text" required>
+            </div>
+            <button>Change Password</button>
+          </mat-card>
+        </div>
+      </div>
+    
+    </div> -->
+    <div class="section2">
+
+      <p><img class="setting-img" src="../../assets/settings-circle-blue-512.png"><span (click)="logout()"><alert></alert></span></p>
+      <p class="sec2Heading">Manage Your Password:</p>
+      <!-- <p>Security Questions?</p>
+          <div class="secQue">
+            <span class="secQuecont">1.What is your favorite Pet Name?</span><input type="password" [(ngModel)]="secAns1" disabled>
+          </div>
+          <div class="secQue">
+            <span class="secQuecont">2.What is your favorite city?</span><input type="password" [(ngModel)]="secAns2" disabled>
+          </div> -->
+     <div class="chngPwd">
+      <div class="secQue">
+        <span class="secQuecont">Password:</span><span class="secQuecont"><input type="password" [(ngModel)]="pwd"  disabled ></span><span><img src="../../assets/Send.png" (click)="isPwdShow=!isPwdShow"></span>
+      </div>
+      <div class="pwdfield" *ngIf="isPwdShow">
+        <mat-card class="pwdcard"> 
+          <form class="form-addUser" #f="ngForm" (ngSubmit)="resetPwd(f.value)">
+          <div class="pwdCont">
+            <label>Current Password:</label>
+            <input id="password" name ="password" type="password" ngModel class="form-control" required>
+          </div>
+          <div class="pwdCont">
+            <label>New Password   :</label>
+            <input id="newPassword1" name="newPassword" type="password" [(ngModel)]="newPassword1" class="form-control" required>
+          </div>
+          <div class="pwdCont">
+            <label>Confirm Password:</label>
+            <input id="newPassword2" name="newPassword" type="text" [(ngModel)]="newPassword2" ngModel class="form-control" required>
+  
+          </div>
+          <input id="username" name="username" type="text" [(ngModel)]="username" ngModel class="form-control" hidden>
+          <div *ngIf="newPassword1!=newPassword2" class="alert alert-danger">The password confirmation does not match.</div>
+          <div *ngIf="isPwdChanged" class="alert alert-danger">Password has been changed! <a class="alink" (click)="redirectToLogin()">Login</a></div>
+          <button type="submit">Change Password</button>
+        </form>
+        </mat-card>
+  
+      </div>
+    </div>
+  </div>
+  </mat-card>
+    </div>
+    </div>
+     
+
+     

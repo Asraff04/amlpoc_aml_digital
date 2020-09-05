@@ -1,0 +1,86 @@
+<div *ngIf="isAddRoles" class="add-role">
+  <div class="add-role-field">
+  <mat-form-field>
+  <mat-label>Select User</mat-label>
+  <mat-select [(value)]="selectedUser" [(ngModel)]="user" [ngModelOptions]="{standalone: true}" >
+  <mat-option (click)="submit(selectedUser)" *ngFor="let user of AllUsers" [value]="user">
+  {{ user.loginId }}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div>
+  <div class="add-role-field">
+  <mat-form-field>
+  <mat-label>Email Id</mat-label>
+  <mat-select [(value)]="mail" [(ngModel)]="mail" [ngModelOptions]="{standalone: true}">
+  <mat-option [value]="mail" >
+  {{mail}}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div>
+  <div class="add-role-field">
+  <mat-form-field>
+  <mat-label>Select Role</mat-label>
+  <mat-select [(ngModel)]="new_role" [ngModelOptions]="{standalone: true}">
+  <mat-option *ngFor="let new_role of mappedrolelist" [value]="new_role" >
+  {{new_role.roleName}}
+  </mat-option>
+  </mat-select>
+  </mat-form-field>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block submit_btn" type="submit" (click)="mapRole()" >Submit</button>
+  </div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th class="addbtn" colspan="9"><img (click)="isAddRoles=!isAddRoles"src="../../assets/Add.png"></th>
+      </tr>
+  <tr class="theading">
+  <th scope="col">Sr Id</th>
+  <th scope="col">Login Id</th>
+  <th scope="col">Email Id</th>
+  <th scope="col">Mapped Role</th>
+  <th scope="col">Add Date</th>
+  <th scope="col">Update Date</th>
+  
+  <th scope="col"></th>
+  
+  </tr>
+  </thead>
+  <tbody>
+  <tr
+  *ngFor="let user of userdetails; let i= index; let odd= odd"
+  [class.odd]="odd"
+  >
+        <th scope="row">{{i+1}}</th>
+        <td ><input [ngClass]="{'userItem':!user.isEditable}" type="text" [(ngModel)]="user.acUsers.loginId"  disabled></td>
+  
+        <td ><input [ngClass]="{'userItem':!user.isEditable}" type="text"[(ngModel)]="user.acUsers.mailId"  disabled></td>
+        <td >
+          <input [ngClass]="{'userItem':!user.isEditable}" type="text"[(ngModel)]="user.ac_roles.roleName"  [hidden]="isEditable==i" [disabled]="isEditable !=i ">
+          <!--<div *ngFor="let role of mappedrolelist"><select [(ngModel)]="role" [hidden]="!user.isEditable">
+            <option *ngFor="let role of mappedrolelist"> {{role.roleName}}</option>
+          </select>
+          <button *ngIf="user.isEditable" id="saveBtn"  class="btn btn-default" type="submit" (click)="updateRole(user.acUsers.userid, role.roleName, role.roleId ) ">Save</button>
+        </div>-->
+        <mat-form-field [hidden]="isEditable !=i">
+          <mat-select [(value)]="selectedrole">
+          <mat-option *ngFor="let roles of mappedrolelist" [value]="roles">
+          {{ roles.roleName }}
+          </mat-option>
+          </mat-select>
+          </mat-form-field>
+        </td>
+        <td ><input [ngClass]="{'userItem':isEditable !=i}" type="text" [(ngModel)]="user.ac_roles.createdDate" disabled></td>
+        <td ><input [ngClass]="{'userItem':isEditable !=i}" type="text" [(ngModel)]="user.ac_roles.modifiedDate"  disabled></td>
+          <td>
+            <button *ngIf="isEditable==i && enableEditIndex == i" id="saveBtn"  class="btn btn-default" type="submit" (click)="updateRole(user.acUsers.userId, selectedrole.roleName, selectedrole.roleId, user.ac_roles.roleId, user.ac_roles.roleName ) ">Save</button>         
+          <img routerLink="/userrole" class="table-row-action edit-action send-img" *ngIf="isEditable !=i" (click)="enableEditMethod($event, i) " src="../../assets/Send.png"> 
+          <img *ngIf="isEditable !=i" (click)="deleteExistRole(user.acUsers.userId, user.ac_roles.roleId, user.ac_roles.roleName)" src="../../assets/Recycle.png">
+          </td>
+    </tr>
+
+  </tbody>
+  </table>

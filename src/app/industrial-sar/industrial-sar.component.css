@@ -1,0 +1,15 @@
+.reportImgtxt{
+    margin: 0 80px 0 80px;
+  }
+  .reportTxt{
+      text-align: center;
+      font-weight: bold;
+  }
+  .reportsImgs{
+      margin: 80px;
+      display: flex;
+  }
+  .report-img{
+      width:400px;
+      height:250px;
+  }

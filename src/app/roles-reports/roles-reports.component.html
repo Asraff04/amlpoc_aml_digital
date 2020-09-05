@@ -1,0 +1,22 @@
+<div class="adminpage-Container">
+  <div class="sidebarCont">
+  <sidebar></sidebar>
+  </div>
+  <div class="pgheaderCont">
+  <div>
+  <page-header></page-header>
+  </div>
+  <nav class="navbar navbar-light " >
+  <ul class="nav">
+  <li [class.mat-elevation-z8]="!isMaintainRoles" [class.mat-elevation-z2]="isMaintainRoles" (click)="isMaintainRoles=true ; isMapReports=false;" class="nav-menu mng-btn" [ngClass]="{'mkbold':isMaintainRoles}">
+  <a>Maintain Roles</a>
+  </li>
+  <li [class.mat-elevation-z8]="!isMapReports" [class.mat-elevation-z2]="isMapReports" (click)="isMapReports=true ; isMaintainRoles=false" class="nav-menu mng-btn" [ngClass]="{'mkbold':isMapReports}">
+  <a>Map Reports</a></li>
+  </ul>
+  </nav>
+  <maintain-user *ngIf="isMaintainRoles"></maintain-user>
+  <map-reports *ngIf="isMapReports"></map-reports>
+  </div>
+  </div>
+  

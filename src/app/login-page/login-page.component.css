@@ -1,0 +1,100 @@
+/* .login-form{
+margin: 100px 0 0 450px;
+width: 400px;
+}
+.login-btn{
+}
+.forgot-pwd{
+float: right;
+} */
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+  margin-bottom: 10px;
+  font-size: 20px;
+  }
+  .form-signin .checkbox {
+  font-weight: normal;
+  }
+  .form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 20px;
+  font-size: 16px;
+  border-radius: 25px !important;
+  margin-bottom: 20px;
+  }
+  .form-signin .form-control:focus {
+  z-index: 2;
+  }
+  .form-signin input[type=email] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  }
+  .form-signin input[type=password] {
+  margin-bottom: 10px;
+  }
+  .signin-btn{
+  border-radius: 25px;
+  margin-top: 25px;
+  }
+  .rem-forgot{
+  display: flex;
+  }
+  .forgot-pwd{
+  flex: 1;
+  text-align: right;
+  color: #007bff ;
+  }
+  .login-bg{
+  background-image: url(../../assets/LoginBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 81.198vw;
+  min-height: 37.45vw;
+  margin: 5.41vw 0 0 8.41vw;
+  display: flex;
+  
+  }
+  .login-pgtxt{
+  margin: 14vw 0 0 10.2vw;
+  color : #ffffff ;
+  width: 26.3vw;
+  
+  }
+  .login-pgtxt1{
+  font-size: 1.67vw;
+  }
+  .login-pgtxt2{
+  font-size: 1.15vw;
+  }
+  .login-container{
+  margin: 5.83vw 0 0 17.88vw;
+  flex: 1;
+  
+  }
+  .copyright-txt{
+  margin: 1.30vw 0 0 36.09vw;
+  
+  }
+  .login-area{
+  margin-top: 50px;
+  }
+  .sign_up{
+  flex: 1;
+  text-align: center;
+  color: #007bff ;
+  text-decoration: underline;
+  margin-top: 20px;
+  }
+  
+  

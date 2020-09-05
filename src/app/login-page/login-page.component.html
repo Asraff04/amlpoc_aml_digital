@@ -1,0 +1,57 @@
+<div class="login-bg">
+    <div class="login-pgtxt">
+    <p class="login-pgtxt1">AML Digital Boardroom</p>
+    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Cras molestie vitae odio sit amet imperdiet. Nulla vitae purus
+    purus risus. Cras vel ex quis enim sodales commodo
+    aliquam quis urna.
+    </p>
+    </div>
+    <div class="login-container">
+    <form class="form-signin" #f ="ngForm" (ngSubmit)="signIn(f.value)">
+    <h2 class="form-signin-heading">Welcome back</h2>
+    <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+    <div class="login-area">
+    <input type="text" id="username" name="username" ngModel #username ="ngModel"class="form-control" placeholder="Username" required minlength="4" appForbiddenName="bob" autofocus>
+    <div *ngIf="username.invalid && (username.dirty || username.touched)"
+    class="alert alert-danger">
+              <div *ngIf="username.errors.required">
+                Username is required.
+              </div>
+              <div *ngIf="username.errors.minlength">
+                min length 4.
+              </div>
+              <div *ngIf="username.errors.forbiddenName">
+                Name cannot be Bob.
+              </div>
+    
+            </div>
+                <input type="password" id="inputPassword" name="password" ngModel #inputPassword="ngModel" class="form-control" placeholder="Password" required minlength="4" appForbiddenName="bob">
+                
+                <div *ngIf="inputPassword.invalid && (inputPassword.dirty || inputPassword.touched)" class="alert alert-danger">
+                <div *ngIf="inputPassword.errors.required">
+                    Password is required.
+                </div>
+                <div *ngIf="inputPassword.errors.minlength">
+                    min length 4.
+                </div>
+                <div *ngIf="inputPassword.errors.forbiddenName">
+                    Password cannot be Bob.
+                </div>
+    
+                
+                </div>
+                <!-- <input type="text" id="userId" name="userId" [(ngModel)]="this.userId" class="form-control" hidden> -->
+                <div class="rem-forgot">
+                    <div><input type="checkbox">  Remember Me</div>
+                    <div class="forgot-pwd"><a>Forgot Password?</a></div>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block signin-btn" type="submit" [disabled]="f.invalid">Sign in</button>
+                <div class="rem-forgot">
+                    <div routerLink="/signUp"class="sign_up"><a>New User? Sign Up</a></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+    <div class="copyright-txt"><p>© 2020 AML Digital Boardroom. All rights reserved.</p></div>

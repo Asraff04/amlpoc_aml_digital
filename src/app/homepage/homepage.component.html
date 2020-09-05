@@ -1,0 +1,102 @@
+
+<!-- <div class="navbar">
+    <div class="dropdown">
+      <img class="hamburger-img" src="../../assets/hamburger.jpg">
+      <div class="dropdown-content">
+        <a>Home</a>
+        <a>My Favorites</a>
+        <a routerLink="/admin">Administrator</a>
+        <a>Settings</a>
+      </div>
+    </div> 
+  </div> -->
+
+<!-- <div class="cardContainer">
+    <div class="cardsRow">
+        <div class="cardContainer">
+            <div class="cardsRow">
+            <button class="homePageCards btn disabled ">
+            <img src="../../assets/AML Knowledge Traversal.png">
+            <p class="card-txt">AML Knowledge Transfer</p>
+            <p class="card-subtxt">[Revels hidden relationships]</p>
+            </button>>
+                <button class="homePageCards btn disabled">
+                    <img src="../../assets/Customer Behavior Analytics.png">
+                    <p class="card-txt">Customer Behavior Analytics</p>
+                    <p class="card-subtxt">[Understand Customer behavior across Segement]</p>
+                </button>>
+                <div routerLink="/saranalytics" class="homePageCards">
+                    <img src="../../assets/SAR Analytics.png">
+                    <p class="card-txt">SAR Analytics</p>
+                    <p class="card-subtxt">[Understand Industry Trends & AML Risk]</p>
+                </div>
+            </div>
+            <div class="cardsRow">
+                <button class="homePageCards btn disabled">
+                    <img src="../../assets/Model Performance Monitoring.png">
+                    <p class="card-txt">Model Performance Monitoring</p>
+                    <p class="card-subtxt">[Track & Monitor AML Model performance]</p>
+                </button>
+                <button class="homePageCards btn disabled">
+                    <img src="../../assets/Entity_Matching_Exposure_Analytics.png">
+                    <p class="card-txt">Entity Matching & Exposure Analytics</p>
+                    <p class="card-subtxt">[Find exposure towards an Entity]</p>
+                </button>
+                <button class="homePageCards btn disabled">
+                    <img src="../../assets/Compliance Reporting.png">
+                    <p class="card-txt">Compliance Reporting</p>
+                    <p class="card-subtxt">[KRI/KPI across business segments]</p>
+                </button>>
+            </div>
+    </div>
+</div>   -->
+<div class="cardContainer">
+    <div class="cardsRow">
+    <button class="homePageCards" (click)="redirectTomodule()"
+    
+    [ngClass]="{'btn disabled': !(this.moduleArray.includes('AML Knowlege Transfer'))}"
+    [disabled] ="!(this.moduleArray.includes('AML Knowlege Transfer'))">
+    <img src="../../assets/AML Knowledge Traversal.png">
+    <p class="card-txt">AML Knowledge Transfer</p>
+    <p class="card-subtxt">[Revels hidden relationships]</p>
+    </button>
+        <button class="homePageCards" (click)="redirectTomodule()"
+        [ngClass]="{'btn disabled': !(this.moduleArray.includes('Customer Behavior Analytics'))}"
+        [disabled] ="!(this.moduleArray.includes('Customer Behavior Analytics'))">
+            <img src="../../assets/Customer Behavior Analytics.png">
+            <p class="card-txt">Customer Behavior Analytics</p>
+            <p class="card-subtxt">[Understand Customer behavior across Segement]</p>
+        </button>
+        <button class="homePageCards" (click)="redirectTomodule()"
+        [ngClass]="{'btn disabled': !(this.moduleArray.includes('SAR Analystics'))}"
+        [disabled] ="!(this.moduleArray.includes('SAR Analystics'))">
+            <img src="../../assets/SAR Analytics.png">
+            <p class="card-txt">SAR Analytics</p>
+            <p class="card-subtxt">[Understand Industry Trends & AML Risk]</p>
+        </button>
+    </div>
+    <div class="cardsRow">
+        <button class="homePageCards btn disabled" (click)="redirectTomodule()"
+        [ngClass]="{'btn disabled': !(this.moduleArray.includes('Model Performance Monitoring'))}"
+        [disabled] ="!(this.moduleArray.includes('Model Performance Monitoring'))">
+            <img src="../../assets/Model Performance Monitoring.png">
+            <p class="card-txt">Model Performance Monitoring</p>
+            <p class="card-subtxt">[Track & Monitor AML Model performance]</p>
+        </button>
+        <button class="homePageCards"
+        
+        [ngClass]="{'btn disabled': !(this.moduleArray.includes('Entity Matching & Exposure Analystics'))}"
+        [disabled] ="!(this.moduleArray.includes('Entity Matching & Exposure Analystics'))">
+            <img src="../../assets/Entity_Matching_Exposure_Analytics.png">
+            <p class="card-txt">Entity Matching & Exposure Analytics</p>
+            <p class="card-subtxt">[Find exposure towards an Entity]</p>
+        </button>
+        <button class="homePageCards"
+        [ngClass]="{'btn disabled': !(this.moduleArray.includes('Compliance Reporting'))}"
+        [disabled] ="!(this.moduleArray.includes('Compliance Reporting'))">
+            <img src="../../assets/Compliance Reporting.png">
+            <p class="card-txt">Compliance Reporting</p>
+            <p class="card-subtxt">[KRI/KPI across business segments]</p>
+        </button>
+    </div>
+    </div>

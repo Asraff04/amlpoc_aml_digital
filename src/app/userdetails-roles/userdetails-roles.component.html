@@ -1,0 +1,47 @@
+<div class="adminpage-Container">
+    <div class="sidebarCont">
+      <sidebar></sidebar>
+    </div>
+    <div class="pgheaderCont">
+    <div>
+      <page-header></page-header>
+    </div>
+    <nav class="navbar  navbar-light " >
+        <ul class="nav">
+          <li [class.mat-elevation-z8]="!isMaintainUsers" [class.mat-elevation-z2]="isMaintainUsers" [ngClass]="{'mkbold':isMaintainUsers}" (click)="isMaintainUsers=true ; isMapRoles=false;" class="nav-menu mng-btn" [ngClass]="{'mkbold':isMaintainUsers}">
+            <a>Maintain User</a>
+          </li>
+          <li [class.mat-elevation-z8]="!isMapRoles" [class.mat-elevation-z2]="isMapRoles" [ngClass]="{'mkbold':isMapRoles}" (click)="isMapRoles=true ; isMaintainUsers=false" class="nav-menu mng-btn" [ngClass]="{'mkbold':isMapRoles}"> 
+            <a>Map Roles</a></li>
+        </ul>
+    </nav>
+    <app-users-table *ngIf="isMaintainUsers"></app-users-table>
+    <roles-table *ngIf="isMapRoles"></roles-table>
+    </div>
+  </div>
+
+<!-- <page-header></page-header>
+<nav class="navbar  navbar-light bg-dark" >
+    <ul class="nav">
+        <li class="nav-menu"
+        [class.mat-elevation-z2]="!isManageUsers"
+        [class.mat-elevation-z8]="isManageUsers"
+           
+            (click)="isManageUsers=true ; isManageRoles=false;">
+            <a>Maintain Users</a>
+        </li>
+        <li class="nav-menu"
+            
+        [class.mat-elevation-z2]="!isManageRoles"
+        [class.mat-elevation-z8]="isManageRoles"
+            
+            (click)="isManageRoles=true ; isManageUsers=false">
+            <a>Map Roles</a>
+        </li>
+  </ul>
+  </nav>
+  <app-users-table *ngIf="isManageUsers"></app-users-table>
+  <roles-table *ngIf="isManageRoles"></roles-table>
+  <!-- [ngStyle]="{'background-color':isManageUsers ? 'green' : 'red' }"
+  [ngStyle]="{'background-color':isManageRoles ? 'green' : 'red' }" -->
+ 

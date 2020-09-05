@@ -1,0 +1,26 @@
+<div class="login-bg">
+    <div class="login-pgtxt">
+    <p class="login-pgtxt1">AML Digital Boardroom</p>
+    <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Cras molestie vitae odio sit amet imperdiet. Nulla vitae purus
+    purus risus. Cras vel ex quis enim sodales commodo
+    aliquam quis urna.
+    </p>
+    </div>
+    <div class="signUp-container">
+    <form class="form-signin" #f ="ngForm" (ngSubmit)="signUp(f.value)">
+    <h2 class="form-signin-heading">Welcome To AML</h2>
+    <alert></alert>
+    <div class="login-area">
+    <input type="text" id="inputEmail" name=username ngModel class="form-control" placeholder="Username" required autofocus>
+    <input type="password" id="inputPassword" name=password ngModel class="form-control" placeholder="Password" required>
+    <input type="text" id="inputPassword" name=password ngModel class="form-control" placeholder="Confirm Password" required>
+    <button class="btn btn-lg btn-primary btn-block signin-btn" type="submit">Sign Up</button>
+    <div class="rem-forgot">
+    <div routerLink="/"class="sign_up"><a>Already have account? Login</a></div>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    <div class="copyright-txt"><p>© 2020 AML Digital Boardroom. All rights reserved.</p></div>

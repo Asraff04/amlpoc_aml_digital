@@ -1,0 +1,31 @@
+.table{
+    background-color: #fff;
+    margin: 15px;
+    width: 90%;
+}
+.odd{
+    background-color: lightgrey;
+}
+.theading{
+    background-color: lightgrey;
+}
+.send-img{
+    margin-right: 15px;
+}
+.addbtn{
+    text-align: right;
+}
+.userItem{
+    border: none;
+}
+.form-addrole{
+    display: flex;
+}
+.alert-box{
+    margin: 0 80px 0 0;
+    width: 400px;
+    float: right;
+    }
+.addUser-cont{
+    margin: 0 30px 0 30px;
+}

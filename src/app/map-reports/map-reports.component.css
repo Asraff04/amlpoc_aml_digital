@@ -1,0 +1,33 @@
+.table{
+    background-color: #fff ;
+    margin: 15px;
+    width: 90%;
+    }
+    .odd{
+    background-color: lightgrey;
+    }
+    .theading{
+    background-color: lightgrey;
+    }
+    .send-img{
+    margin-right: 15px;
+    }
+    .addbtn{
+    text-align: right;
+    }
+    .userItem{
+        border: none;
+    }
+    .add-role{
+        display: flex;
+        }
+        .add-role-field{
+        margin-left: 80px;
+        border: 1px solid #333 ;
+        padding: 10px 10px 0px 20px;
+        height: 50px;
+        }
+        .submit_btn{
+        width: 200px;
+        margin-left: 80px;
+        }

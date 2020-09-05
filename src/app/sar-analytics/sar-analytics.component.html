@@ -1,0 +1,47 @@
+<!-- <div class="navbar">
+    <div class="dropdown">
+      <img class="hamburger-img" src="../../assets/hamburger.jpg">
+      <div class="dropdown-content">
+        <a>Home</a>
+        <a>My Favorites</a>
+        <a routerLink="/admin">Administrator</a>
+        <a>Settings</a>
+      </div>
+    </div> 
+  </div> -->
+  <div class="adminpage-Container">
+    <div class="sidebarCont">
+      <sidebar></sidebar>
+    </div>
+    <div class="pgheaderCont">
+    <div>
+      <page-header></page-header>
+    </div>
+    <nav class="navbar  navbar-light " >
+      <ul class="nav">
+        <li [class.mat-elevation-z2]="!isISR" [class.mat-elevation-z8]="isISR" (click)="isISR=true ; isFSR=false;" class="nav-menu mng-btn">
+          <a>Industrial SAR Reporting</a>
+        </li>
+        <li [class.mat-elevation-z2]="!isFSR" [class.mat-elevation-z8]="isFSR" (click)="isFSR=true ; isISR=false" class="nav-menu mng-btn">
+          <a>FI SAR Reporting</a></li>
+      </ul>
+    </nav>
+    <!-- <nav class="navbar-light bg-light" >
+      <ul class="nav">
+          <li class="nav-menu"
+              [ngStyle]="{'background-color':isISR ? 'green' : 'red' }"
+              (click)="isISR=true ; isFSR=false;">
+              <a class="isr-txt">Industrial SAR Reporting</a>
+          </li>
+          <li class="nav-menu"
+              [ngStyle]="{'background-color':isFSR ? 'green' : 'red' }"
+              (click)="isFSR=true ; isISR=false;">
+              <a>FI SAR Reporting</a>
+          </li>
+    </ul>
+    </nav> -->
+    <industrial-sar></industrial-sar>
+    </div>
+  </div>
+  
+

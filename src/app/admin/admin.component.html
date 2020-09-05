@@ -1,0 +1,91 @@
+
+
+<!-- <div class="adminpage-Container">
+  <div class="sidebarCont">
+    <sidebar></sidebar>
+  </div>
+  <div class="pgheaderCont">
+    <div>
+      <page-header></page-header>
+    </div>
+    <nav class="navbar  navbar-light " >
+      <ul class="nav">
+        
+        <li [class.mat-elevation-z2]="!isManageUsers" [class.mat-elevation-z8]="isManageUsers" (click)="isManageUsers=true ; isManageRoles=false;" class="nav-menu mng-btn" [ngClass]="{'mkbold':isManageUsers}"> 
+          <a>Manage User</a>
+        </li>
+        <li [class.mat-elevation-z2]="!isManageRoles" [class.mat-elevation-z8]="isManageRoles" (click)="isManageRoles=true ; isManageUsers=false" class="nav-menu mng-btn" [ngClass]="{'mkbold':isManageRoles}">
+          <a>Manage Roles</a></li>
+      </ul>
+    </nav>
+    <div class="adm-containt">
+      <div *ngIf="isManageUsers" class="mng-u-dpdw">
+        <mat-card class="menu-card1 mat-elevation-z2">
+          <p class="nav-menu bg-transperant"><a routerLink="/userrole" (click)="isManageUsers=true ; isManageRoles=false">Maintain User</a></p>
+          <p class="nav-menu bg-transperant"><a routerLink="/userrole" (click)="isManageRoles=true; isManageUsers=false ">Map Roles</a></p>
+          </mat-card>
+      </div>
+        <div *ngIf="isManageRoles" class="mng-u-dpdw">
+          <mat-card class="menu-card2 mat-elevation-z2">
+            <p class="nav-menu bg-transperant"><a routerLink="/rolesandreports" (click)="isManageUsers=true ; isManageRoles=false">Maintain Roles</a></p>
+            <p class="nav-menu bg-transperant"><a routerLink="/rolesandreports" (click)="isManageRoles=true; isManageUsers=false ">Map Reports</a></p>
+            </mat-card>
+        </div>
+    </div>    
+  </div>
+</div>-->
+<!-- 
+<nav class="navbar  navbar-light bg-dark" >
+    <ul class="nav">
+      <li 
+      [class.mat-elevation-z2]="!isManageUsers"
+      [class.mat-elevation-z8]="isManageUsers" 
+      (click)="isManageUsers=true ; isManageRoles=false;" 
+      class="nav-menu"><a>Manage User</a></li>
+      <li 
+      [class.mat-elevation-z2]="!isManageRoles"
+      [class.mat-elevation-z8]="isManageRoles"
+      (click)="isManageRoles=true ; isManageUsers=false"
+      class="nav-menu">
+      <a routerLink="/maintain-user">Manage Roles</a></li>
+  </ul>
+  </nav> -->
+
+<div class="adminpage-Container">
+<div class="sidebarCont">
+<sidebar></sidebar>
+</div>
+<div class="pgheaderCont">
+<div>
+<page-header></page-header>
+</div>
+<nav class="navbar navbar-light " >
+<ul class="nav">
+<li [class.mat-elevation-z8]="!isManageUsers" [class.mat-elevation-z2]="isManageUsers" (click)="isManageUsers=true ; isManageRoles=false;" class="nav-menu mng-btn"
+[ngClass]="{'mkbold':isManageUsers}"
+>
+<a>Manage User</a>
+</li>
+<li [class.mat-elevation-z8]="!isManageRoles" [class.mat-elevation-z2]="isManageRoles" (click)="isManageRoles=true ; isManageUsers=false" class="nav-menu mng-btn" [ngClass]="{'mkbold':isManageRoles}">
+<a>Manage Roles</a></li>
+</ul>
+</nav>
+<div class="adm-containt">
+<div *ngIf="isManageUsers" class="mng-u-dpdw">
+<mat-card class="menu-card1 mat-elevation-z2">
+<p class="nav-menu bg-transperant"><a routerLink="/userrole" (click)="isManageUsers=true ; isManageRoles=false">Maintain User</a></p>
+<p class="nav-menu bg-transperant"><a routerLink="/userrole" (click)="isManageRoles=true; isManageUsers=false ">Map Roles</a></p>
+</mat-card>
+</div>
+<div *ngIf="isManageRoles" class="mng-u-dpdw">
+<mat-card class="menu-card2 mat-elevation-z2">
+<p class="nav-menu bg-transperant"><a routerLink="/rolesandreports" (click)="isManageUsers=true ; isManageRoles=false">Maintain Roles</a></p>
+<p class="nav-menu bg-transperant"><a routerLink="/rolesandreports" (click)="isManageRoles=true; isManageUsers=false ">Map Reports</a></p>
+</mat-card>
+</div>
+</div>
+
+</div>
+</div>
+
+ 

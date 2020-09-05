@@ -1,0 +1,52 @@
+<div *ngIf="isAddrole" class="addUser-cont">
+  <form class="form-addrole" #f="ngForm" (ngSubmit)="addRole(f.value)">
+        <input type="text" id="inputEmail" name="roleName" ngModel class="form-control" placeholder="Role Name" required autofocus>
+        <input type="text" id="inputPassword" name="roleShortName" ngModel class="form-control" placeholder="Role Short Name" required>
+        <button class="btn btn-lg btn-primary btn-block signin-btn" type="submit" (click)="isAddrole=!isAddrole; addRole(f.value)" >Add Role</button>
+  </form>
+</div>
+<div class="alert-box">
+  <alert></alert>
+  </div>
+<table class="table">
+    <thead>
+      <tr>
+        <th class="addbtn" colspan="6" (click)="isAddrole=!isAddrole"><img src="../../assets/Add.png"></th>
+      </tr>
+      <tr class="theading">
+        <th scope="col">Sr Id</th>
+        <th scope="col">Role Name</th>
+        <th scope="col">Role Short Name</th>
+        <th scope="col">Add Date</th>
+        <th scope="col">Update Date</th>  
+        <th scope="col"></th>      
+      </tr>
+    </thead>
+    <tbody>
+      <tr 
+      *ngFor="let role of rolelist; let i= index; let odd= odd"
+      [class.odd]="odd"
+      >
+      <th scope="row">{{i+1}}</th>
+      <td ><input [ngClass]="{'userItem':!role.isEditable}" type="text" [(ngModel)]="role.roleName"  [disabled]="!role.isEditable"></td>
+      
+      <td ><input [ngClass]="{'userItem':!role.isEditable}" type="text"[(ngModel)]="role.roleShortName"  [disabled]="!role.isEditable"></td>
+      <!-- <td >
+        <input [ngClass]="{'userItem':!user.isEditable}" type="text"[(ngModel)]="role.addDate"  [hidden]="user.isEditable" [disabled]="!user.isEditable">
+        <div><select [(ngModel)]="user.emailid" [hidden]="!user.isEditable" selected="user.loginid">
+          <option *ngFor="let role of userroles">{{role}}</option>
+        </select>
+      </div>
+      
+      </td> -->
+      <td ><input [ngClass]="{'userItem':!role.isEditable}" type="text" [(ngModel)]="role.createdDate" disabled></td>
+      <td ><input [ngClass]="{'userItem':!role.isEditable}" type="text" [(ngModel)]="role.modifiedDate"  disabled></td>
+        <td>
+        <button *ngIf="role.isEditable" id="saveBtn" (click)="updateRole(role.roleId,i)" class="btn btn-default" type="submit">Save</button>
+        <img routerLink="/rolesandreports" class="table-row-action edit-action send-img" *ngIf="!role.isEditable" (click)="role.isEditable=!role.isEditable" src="../../assets/Send.png"> 
+        <img *ngIf="!role.isEditable" (click)="deleteRole(role.roleId,i)" src="../../assets/Recycle.png">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

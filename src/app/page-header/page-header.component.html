@@ -1,0 +1,12 @@
+<div class="header-bar mat-elevation-z2">
+   <div class="header-txt" routerLink="/homescreen">AML Digital Boardroom</div>
+   <div class="profile-img">
+        <div class="dropdown">
+            <p>{{userName}}<img class="pro-img" src="../../assets/profile-icon.png"></p>
+            <div class="dropdown-content">
+              <a routerLink="/settings">Settings</a>
+              <a (click)="logout()">Logout</a>
+            </div>
+          </div> 
+    </div>
+</div>

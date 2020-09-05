@@ -1,0 +1,17 @@
+.mng-btn{
+    border-radius: 20px;
+    width: 150px;
+    text-align: center;
+}
+.nav-menu{
+    background-color: #ffffff;
+    margin: 10px;
+    padding: 10px;
+}
+.btn-container{
+    margin: 15px;
+}
+.mkbold{
+    background: #2781e7 ;
+    color: #fff ;
+}

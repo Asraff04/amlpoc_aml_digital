@@ -1,0 +1,80 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  }
+  .example-full-width {
+  width: 100%;
+  }
+  .settings-card{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 81.198vw;
+  height: 37.45vw;
+  margin: 3.41vw 0 0 3.41vw;
+  display: flex;
+  font-size: 16px;
+  border-radius: 30px;
+  }
+  
+  .pwdfield{
+  flex: 1;
+  margin-left: 20px;
+  }
+  .details_lable{
+  padding: 0 150px 20px 0;
+  font-weight: bold;
+  }
+  .details_content{
+  margin-left: 100px;
+  padding: 0 0 20px 0;
+  }
+  .section1{
+  background-image: url(../../assets/LoginBg.png);
+  border-radius: 25px;
+  color: #fff ;
+  }
+  .section2{
+  margin: 4.17vw 0 0 5.83vw;
+  flex: 1;
+  font-weight: bold;
+  }
+  .sec2Heading{
+  text-decoration: underline;
+  font-weight: bold;
+  }
+  .sec1Heading{
+  text-decoration: underline;
+  }
+  .pwdCont{
+  margin-bottom: 20px;
+  }
+  .secQue{
+  margin-top:20px
+  }
+  .profile-img{
+  width:80px;
+  height:80px;
+  margin-bottom: 30px;
+  }
+  .chngPwd{
+  display: flex;
+  }
+  .pwdcard{
+  width: 400px;
+  background-color: #f0f0f0 ;
+  }
+  .sec1-content{
+  margin: 4.17vw 35px 0 35px;
+  }
+  .setting-img{
+  width: 60px;
+  height:60px;
+  margin-bottom: 30px;
+  }
+  .secQuecont{
+  margin-right: 20px;
+  }
+  .alink{
+  text-decoration: underline;
+  }
